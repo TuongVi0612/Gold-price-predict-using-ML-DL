@@ -1,0 +1,207 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage[utf8]{inputenc}
+\usepackage[vietnamese]{babel}
+\usepackage{amsmath}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp} 
+\usepackage{xcolor}
+\usepackage{biblatex}
+\addbibresource{ref.bib}
+\usepackage{fancyhdr}
+\usepackage{adjustbox}
+\usepackage{lipsum}
+\usepackage{tabularx} % for better control over table width
+\usepackage{multirow} % Thêm package multirow
+\usepackage{array}
+\usepackage{makecell}
+\pagestyle{fancy}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{relsize}
+\usepackage{caption}
+\captionsetup[table]{skip=10pt} 
+\captionsetup[table]{belowskip=-20pt} % Khoảng cách giữa bảng và văn bản tiếp theo
+
+\fancyhf{}
+\rfoot{\thepage}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{DỰ BÁO GIÁ KIM LOẠI QUÝ SỬ DỤNG CÁC MÔ HÌNH THỐNG KÊ, HỌC MÁY VÀ HỌC SÂU\\
+}
+
+\author{\IEEEauthorblockN{1. Phan Minh Trí}
+\IEEEauthorblockA{\textit{Khoa Hệ thống Thông tin} \\
+\textit{Trường Đại học Công nghệ Thông tin}\\
+21522709@gm.uit.edu.vn}
+\and
+\IEEEauthorblockN{2. Vương Thanh Linh}
+\IEEEauthorblockA{\textit{Khoa Hệ thống Thông tin} \\
+\textit{Trường Đại học Công nghệ Thông tin}\\
+21521082@gm.uit.edu.vn}
+\and
+\IEEEauthorblockN{3. Lê Nguyễn Hoàng Huy}
+\IEEEauthorblockA{\textit{Khoa Hệ thống Thông tin} \\
+\textit{Trường Đại học Công nghệ Thông tin}\\
+21520915@gm.uit.edu.vn}
+\and
+\IEEEauthorblockN{4. Trần Hạnh Thảo}
+\IEEEauthorblockA{\textit{Khoa Hệ thống Thông tin} \\
+\textit{Trường Đại học Công nghệ Thông tin}\\
+21522609@gm.uit.edu.vn}
+\and
+\IEEEauthorblockN{                }
+\IEEEauthorblockA{\textit{                      } \\
+\textit{                                  }\\
+                     }
+                     \and
+\IEEEauthorblockN{                }
+\IEEEauthorblockA{\textit{                      } \\
+\textit{                                  }\\
+                     }
+                     \and
+\IEEEauthorblockN{                }
+\IEEEauthorblockA{\textit{                      } \\
+\textit{                                  }\\
+                     }
+                     \and
+\IEEEauthorblockN{                }
+\IEEEauthorblockA{\textit{                      } \\
+\textit{                                  }\\
+                     }
+                     \and
+\IEEEauthorblockN{                }
+\IEEEauthorblockA{\textit{                      } \\
+\textit{                                  }\\
+                     }
+                     \and
+\IEEEauthorblockN{                }
+\IEEEauthorblockA{\textit{                      } \\
+\textit{                                  }\\
+                     }\and
+\IEEEauthorblockN{                }
+\IEEEauthorblockA{\textit{                      } \\
+\textit{                                  }\\
+                     }
+\and
+\IEEEauthorblockN{5. Nguyễn Thị Tường Vi}
+\IEEEauthorblockA{\textit{Khoa Hệ thống Thông tin} \\
+\textit{Trường Đại học Công nghệ Thông tin}\\
+21522787@gm.uit.edu.vn}
+}
+
+\maketitle
+\thispagestyle{fancy}
+\begin{abstract}
+\input{section/abstract.tex}
+\end{abstract}
+
+\begin{IEEEkeywords}
+Dự báo, Kim loại quý, LR, ETS, ARIMA, RF, SVR, RNN, GRU, LSTM, TimesNet, Autoformer
+\end{IEEEkeywords}
+
+\section{GIỚI THIỆU}
+\input{section/intro.tex}\\
+
+\section{CƠ SỞ LÝ THUYẾT}
+\input{section/relatedworks/LR.tex}
+
+\input{section/relatedworks/ETS.tex}
+
+\input{section/relatedworks/ARIMA.tex}
+
+\input{section/relatedworks/RF.tex}
+
+\input{section/relatedworks/SVM.tex}
+
+\input{section/relatedworks/RNN.tex}
+
+\input{section/relatedworks/GRU.tex}
+
+\input{section/relatedworks/LSTM.tex}
+
+\input{section/relatedworks/TimesNet.tex}
+
+\input{section/relatedworks/Autoformer.tex}\\
+
+\section{ĐỐI TƯỢNG NGHIÊN CỨU}
+\input{section/dataset.tex}
+\hfill
+\section{PHƯƠNG PHÁP NGHIÊN CỨU}
+\subsection{Linear Regression (LR)}
+\input{section/methods/LR.tex}
+
+\subsection{Exponential Smoothing Trend (ETS)}
+\input{section/methods/ETS.tex}
+
+\subsection{ARIMA}
+\input{section/methods/ARIMA.tex}
+
+\subsection{Random Forest (RF)}
+\input{section/methods/RF.tex}
+
+\subsection{Support Vector Regression (SVR)}
+\input{section/methods/SVR.tex}
+
+\subsection{Recurrent Neural Network (RNN)}
+\input{section/methods/RNN.tex}
+
+\subsection{Gated Recurrent Unit (GRU)}
+\input{section/methods/GRU.tex}
+
+\subsection{Long Short Term Memory (LSTM)}
+\input{section/methods/LSTM.tex}
+
+\subsection{Autoformer}
+\input{section/methods/Autoformer.tex}
+
+\subsection{TimesNet}
+\input{section/methods/TimesNet.tex}
+
+\subsection{Độ đo}
+\input{section/methods/dodo.tex}
+
+\section{Thực nghiệm}
+\input{section/results/LR.tex}
+
+\input{section/results/ETS.tex}
+
+\input{section/results/ARIMA.tex}
+
+\input{section/results/RF.tex}
+
+\input{section/results/SVM.tex}
+
+\input{section/results/RNN.tex}
+
+\input{section/results/GRU.tex}
+
+\input{section/results/LSTM.tex}
+
+\input{section/results/TimesNet.tex}
+
+\input{section/results/Autoformer.tex}
+
+\input{section/results/Summary.tex}
+
+\section{Kết luận}
+\input{section/conclusion.tex}
+
+\begin{center}
+\textbf{ĐÓNG GÓP CỦA CÁC THÀNH VIÊN}
+\end{center}
+\input{section/distribution.tex}
+
+\begin{center}
+\textbf{LỜI CẢM ƠN}
+\end{center}
+\input{section/thankyou.tex}
+
+\printbibliography
+\end{document}

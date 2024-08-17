@@ -1,0 +1,37 @@
+SVM (Support Vector Machines) là một phương pháp máy vector hỗ trợ được sử dụng cho các bài toán phân loại. Mục tiêu của SVM là tìm một siêu phẳng (hyperplane) tốt nhất phân chia dữ liệu thành các lớp khác nhau. Tuy nhiên, trong bài toán dự đoán giá kim loại quý, cần quan tâm đến việc dự đoán một giá trị thực (giá kim loại) dựa trên đặc trưng đầu là giá đóng cửa (Close). Do đó, nhóm sử dụng SVR để tìm cách dự đoán một giá trị thực. SVR sẽ tìm một hàm hồi quy tốt nhất mà sai số của các dự đoán nằm trong khoảng chấp nhận được. SVR có thể sử dụng các hàm hạt nhân (kernel) để chuyển đổi không gian đầu vào sang không gian đặc trưng cao giúp cho việc xử lý các dữ liệu tuyến tính và phi tuyến. Một kernel tuyến tính là tích vô hướng đơn giản giữa hai vector đầu vào, trong khi một kernel phi tuyến là một hàm phức tạp hơn có thể nắm bắt các mẫu phức tạp hơn trong dữ liệu. 
+
+Không giống như các mô hình hồi quy truyền thống, SVR tập trung vào việc giảm thiểu lỗi dự đoán thay vì khớp dữ liệu một cách chính xác. Để đạt được điều này bằng cách tìm một siêu phẳng tối ưu tối ưu hóa khoảng cách hay biên, giữa các giá trị dự đoán và các điểm dữ liệu thực tế. SVR đạt được sự cân bằng giữa tính đơn giản và tính linh hoạt bằng cách cho phép một mức đúng sai nhất định, hay biên độ lỗi, xung quanh các giá trị dự đoán.
+
+
+Hàm hồi quy trong SVR:
+\[
+f(x) = \langle w, x \rangle + b
+\]\\
+Hàm mất mát E-insensitive:
+\[
+L(y, F(x_i, \hat{w})) = \max(0, y - F(x_i, \hat{w}) - \varepsilon)
+\]\\
+Trong đó:\\
+    \indent\textbullet\ \(L(y,F(x_i,\hat{w})\): hàm lỗi.\\
+    \indent\textbullet\ \(y\): giá trị thực.\\
+    \indent\textbullet\ \(F(x_i,\hat{w})\): sai số ngẫu nhiên.\\
+    \indent\textbullet\ \(\varepsilon\): tham số điều chỉnh cho phép sai lệch.\\
+Dưới đây là một số hàm kernel có thể sử dụng trong SVR
+\begin{table}[htbp]
+  \centering
+\begin{tabular}{|c|c|}
+    \hline
+     Kernel& Hàm\\ \hline
+     Linear &  $f(X1,X2)=X1^TX2$\\ \hline
+     Polynomial & $f(X1,X2)=(X1^TX2 +1)^d$ \\ \hline
+     Sigmoid &  $f(X1,X2)=\tanh(\alpha x^{T}y+x)$\\ \hline
+     RBF &  $f(X1,X2)=e^{\frac{-{\mid\mid x1-x2 \mid\mid}^2}{2\sigma^2}}$\\ \hline
+\end{tabular}
+\caption{Bảng tổng hợp các hàm kernel của SVR}
+\end{table}
+
+\hfill\\
+\textbf{Linear}: Đây là kernel đơn giản nhất và cơ bản nhất trong SVR. Linear phù hợp khi dữ liệu có thể được phân tách tuyến tính trong không gian đầu vào.\\
+\textbf{Polynomial}: Kernel này biến đổi dữ liệu đầu vào không gian đa thức, được xác định bởi tham số bậc và hệ số độ lệch.\\
+\textbf{Sigmoid}: Kernel này biến đổi dữ liệu đầu vào thành không gian phi tuyến bằng cách sử dụng hàm sigmoid. Hàm sigmoid áp dụng phép biến đổi phi tuyến lên tích vô hướng của hai vector đầu vào. Ngoài ra có thể được sử dụng cho các bài toán có dữ liệu nhị phân.\\
+\textbf{RBF}: Đây là kernel phi tuyến phổ biến và cho phép mô hình học các cấu trúc phi tuyến phức tạp. Hàm RBF được xác định bởi tham số độ dốc.

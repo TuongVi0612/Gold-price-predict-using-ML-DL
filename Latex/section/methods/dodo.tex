@@ -1,0 +1,20 @@
+Để đánh giá năng lực dự đoán của các mô hình sử dụng trong đồ án, nhóm sử dụng ba phép đo hiệu suất bao gồm: Mean Absolute Percentage Error (MAPE), Root Mean Square Error (RMSE) và Mean Square Error (MSE).
+
+Độ đo MAPE đo lường sai số tuyệt đối trung bình giữa giá trị dự đoán và giá trị thực tế với công thức như sau:
+\[
+MAPE = \frac{\sum_{i=1}^{n}\left(\frac{abs(y_i - f_i)}{y_i}\right)}{n}
+\]
+
+Độ đo MSE tính toán trung bình bình phương của các sai số giữa giá trị thực tế và giá trị dự báo với công thức sau:
+\[
+MSE = \frac{\sum(f_i - y_i)^2}{N}
+\]
+
+Độ đo RMSE đo lường khoảng cách trung bình giữa các giá trị dự đoán và thực tế với công thức như sau:
+\[
+RMSE = \sqrt{\frac{\sum_{i=1}^{n}(f_i - y_i)^2}{n}}
+\]
+Trong đó:\\
+    \indent\textbullet\ \(f_{i}\) là giá trị dự đoán cho mẫu thứ i.\\
+    \indent\textbullet\ \(y_{i}\) là giá trị thực tế cho mẫu thứ i.\\
+    \indent\textbullet\ \(N\) là số lượng mẫu.
